@@ -49,4 +49,15 @@ leng = len(Arr)
 for a in range(leng-1):
     if Arr[a] == Arr[a+1]:
         print("Yes , Duplicates exists." , " << Sorting method")
+        
+#More optimized #Timecomplexity : O(n) , Space Complexity : O(1)
+A = [ 3 , 2 , 1, 2, 2, 3]
+leng = len(A)
+for a in range(leng):
+    if (A[abs(A[a])] < 0):
+        print("Yes Duplicates do exists" , "<< Negative indexing")
+        break
+    else: 
+        A[A[a]] = -A[A[a]]
+
 
