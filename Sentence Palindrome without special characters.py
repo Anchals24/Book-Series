@@ -37,6 +37,20 @@ def isPalindrome(A):
         return True
 print(isPalindrome("A man, a plan, a canal: Panama"))
 
+#Fast Solution:
+def isPalindrome(A):
+        a = A.lower()
+        sp = [",",".",":"," ",'"']
+        for i in sp:
+            a = a.replace(i,'')
+        #print("A after removing special characters >>" , a)
+        if (a == a[::-1]):
+            return(1)
+        else:
+            return(0)
+isPalindrome("A man, a plan, a canal: Panama")
+
+
 #Functions : >> isalnum()
 # Stripped String find out : re.sub(r'\W+','', S) [After importing the library >> "import re"]
 
