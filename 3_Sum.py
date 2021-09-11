@@ -34,4 +34,25 @@ for key , values in D.items():
                 print(ANS)
         break
         
+        
+#Approach 3: first sort the given array and the using two-pointer method.
+
+def three_sum(A):
+    target = 55
+    A.sort()
+    leng = len(A)                            
+    for a in range(leng):
+        i = a + 1
+        j = leng - 1
+        while i < j:
+            if A[a] + A[i] + A[j] > target:
+                j -= 1
+            elif A[a] + A[i] + A[j] < target:
+                i += 1
+            elif A[a] + A[i] + A[j] == target:
+                return (A[a] , A[i] , A[j])
+    return "Does not exist"
+print(three_sum([ 1 , 1, 0, 5, 7, 6]))
    
+        
+
